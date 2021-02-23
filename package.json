@@ -1,27 +1,94 @@
 {
-  "name": "snarkjs",
-  "type": "module",
-  "version": "0.3.57",
-  "description": "zkSNARKs implementation in JavaScript",
-  "main": "./build/main.cjs",
-  "module": "./main.js",
-  "exports": {
-    "import": "./main.js",
-    "require": "./build/main.cjs"
+  "_from": "git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+  "_id": "snarkjs@0.1.20",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/snarkjs",
+  "_phantomChildren": {
+    "@babel/code-frame": "7.12.13",
+    "ajv": "6.12.6",
+    "bindings": "1.5.0",
+    "chalk": "2.4.2",
+    "cross-spawn": "6.0.5",
+    "debug": "4.3.1",
+    "doctrine": "3.0.0",
+    "eslint-scope": "4.0.3",
+    "eslint-utils": "1.4.3",
+    "eslint-visitor-keys": "1.3.0",
+    "espree": "5.0.1",
+    "esquery": "1.4.0",
+    "esutils": "2.0.3",
+    "file-entry-cache": "5.0.1",
+    "functional-red-black-tree": "1.0.1",
+    "glob": "7.1.6",
+    "globals": "11.12.0",
+    "ignore": "4.0.6",
+    "import-fresh": "3.3.0",
+    "imurmurhash": "0.1.4",
+    "inherits": "2.0.4",
+    "inquirer": "6.5.2",
+    "js-yaml": "3.14.1",
+    "json-stable-stringify-without-jsonify": "1.0.1",
+    "levn": "0.3.0",
+    "lodash": "4.17.21",
+    "minimatch": "3.0.4",
+    "minimist": "1.2.5",
+    "nan": "2.14.2",
+    "natural-compare": "1.4.0",
+    "optionator": "0.8.3",
+    "path-is-inside": "1.0.2",
+    "progress": "2.0.3",
+    "regexpp": "2.0.1",
+    "safe-buffer": "5.2.1",
+    "strip-ansi": "4.0.0",
+    "strip-json-comments": "2.0.1",
+    "table": "5.4.6",
+    "text-table": "0.2.0"
   },
-  "scripts": {
-    "test": "mocha",
-    "build": "rollup -c config/rollup.cjs.config.js",
-    "buildcli": "rollup -c config/rollup.cli.config.js",
-    "buildiife": "BROWSER=true rollup -c config/rollup.iife.config.js",
-    "buildiifemin": "BROWSER=true rollup -c config/rollup.iife_min.config.js"
+  "_requested": {
+    "type": "git",
+    "raw": "snarkjs@git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+    "name": "snarkjs",
+    "escapedName": "snarkjs",
+    "rawSpec": "git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+    "saveSpec": "git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+    "fetchSpec": "https://github.com/tornadocash/snarkjs.git",
+    "gitCommittish": "869181cfaf7526fe8972073d31655493a04326d5"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+  "_spec": "snarkjs@git+https://github.com/tornadocash/snarkjs.git#869181cfaf7526fe8972073d31655493a04326d5",
+  "_where": "D:\\dev\\hotpot\\hotpot-core",
+  "author": {
+    "name": "Jordi Baylina"
   },
   "bin": {
-    "snarkjs": "build/cli.cjs"
+    "snarkjs": "cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/iden3/snarkjs/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "big-integer": "^1.6.43",
+    "chai": "^4.2.0",
+    "escape-string-regexp": "^1.0.5",
+    "eslint": "^5.16.0",
+    "keccak": "^2.0.0",
+    "yargs": "^12.0.5"
+  },
+  "deprecated": false,
+  "description": "zkSNARKs implementation in JavaScript",
+  "devDependencies": {
+    "eslint-plugin-mocha": "^5.3.0",
+    "mocha": "^5.2.0"
   },
   "directories": {
     "templates": "templates"
   },
+  "homepage": "https://github.com/iden3/snarkjs#readme",
   "keywords": [
     "zksnark",
     "zcash",
@@ -31,32 +98,15 @@
     "cryptography",
     "circuit"
   ],
-  "author": "Jordi Baylina",
   "license": "GPL-3.0",
+  "main": "index.js",
+  "name": "snarkjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iden3/snarkjs.git"
+    "url": "git+https://github.com/iden3/snarkjs.git"
   },
-  "dependencies": {
-    "@iden3/binfileutils": "0.0.8",
-    "blake2b-wasm": "https://github.com/jbaylina/blake2b-wasm.git",
-    "circom_runtime": "0.1.11",
-    "fastfile": "0.0.19",
-    "ffjavascript": "0.2.34",
-    "logplease": "^1.2.15",
-    "r1csfile": "0.0.31"
+  "scripts": {
+    "test": "mocha"
   },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^17.0.0",
-    "@rollup/plugin-json": "^4.1.0",
-    "@rollup/plugin-node-resolve": "^11.1.0",
-    "@rollup/plugin-replace": "^2.3.4",
-    "@rollup/plugin-virtual": "^2.0.3",
-    "chai": "^4.2.0",
-    "eslint": "^6.8.0",
-    "mocha": "^7.1.1",
-    "rollup": "^2.36.2",
-    "rollup-plugin-terser": "^7.0.2",
-    "rollup-plugin-visualizer": "^4.2.0"
-  }
+  "version": "0.1.20"
 }
